@@ -234,7 +234,7 @@ String name=(String)session.getAttribute("name");
             let usernameId = document.getElementById('usernameId').value;
             let uType = document.getElementById('uType').value;
             let rightBox = document.getElementById('rightBox');
-
+	console.log('hello script is lpaed');
 
             showProfile();
             //handling navbar on reponsive 
@@ -285,6 +285,7 @@ String name=(String)session.getAttribute("name");
             //fucntion to replace the content to change the password
 
             function changePassword() {
+            	console.log('change paswword is activated');
                 let xml = new XMLHttpRequest();
                 xml.onload = function() {
                     console.log(xml.responseText);
@@ -427,16 +428,17 @@ String name=(String)session.getAttribute("name");
 
                 let xml = new XMLHttpRequest();
                 xml.onload = function() {
+                	console.log(xml.response.text);
                     rightBox.innerHTML = xml.responseText;
                 };
 
-                xml.onload = function() {
-                    let rt = xml.responseText;
-                    rt = (Number) rt;
-                    if (rt == 1) {
+  //              xml.onload = function() {
+                    //let rdz = xml.responseText;
+                    //rdz = (Number)rdz;
+                    //if (rdz == 1) {
 
-                    }
-                }
+                    //}
+//                }
                 xml.open("POST", "SubmitTest", "YES");
                 xml.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
                 // xml.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");

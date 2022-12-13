@@ -88,7 +88,7 @@ public class ShowProfile extends HttpServlet {
 			    	  +"</div>"
 			    	  +"</div>");
 			      }
-			      
+			      //getServletContext().getRealPath("/")+
 			}
 			catch(Exception e){
 				out.println(e);
